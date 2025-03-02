@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eduquest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .input-field {
+            margin: 10px 0;
+        }
+        .button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Eduquest</h1>
+        <div class="input-field">
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="input-field">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div class="button">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const validCredentials = [
+                { user: 'bingleton', pass: 'argonian6' },
+                { user: 'the_mr.argonian', pass: 'marshall5' }
+            ];
+
+            const isValid = validCredentials.some(cred => cred.user === username && cred.pass === password);
+
+            if (isValid) {
+                window.location.href = '12345654321.html';
+            } else {
+                alert('Invalid credentials');
+            }
+        }
+    </script>
+</body>
+</html>
