@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('AE8A006C-3F57-435A-9552-42541BD3DB16.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .game-item {
+            margin: 10px 0;
+        }
+        .game-item img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Games</h1>
+        <div class="game-item">
+            <img src="F49C3BC3-4B45-44B7-BE3A-5692B4F7A9D7.png" alt="1v1 Game" onclick="openGame()">
+        </div>
+    </div>
+    <script>
+        function openGame() {
+            const gameWindow = window.open('1v1.html', '_blank');
+            gameWindow.focus();
+            gameWindow.onkeydown = function(event) {
+                if (event.key === 'Escape') {
+                    gameWindow.close();
+                }
+            };
+        }
+    </script>
+</body>
+</html>
