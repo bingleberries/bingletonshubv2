@@ -143,35 +143,37 @@
         </div>
     </div>
     <script>
-        document.getElementById('searchBar').addEventListener('input', function() {
-            let filter = this.value.toLowerCase();
-            let gameItems = document.querySelectorAll('.game-item');
-            gameItems.forEach(function(item) {
-                let altText = item.querySelector('img').alt.toLowerCase();
-                if (altText.includes(filter)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+    document.getElementById('searchBar').addEventListener('input', function() {
+        let filter = this.value.toLowerCase();
+        let gameItems = document.querySelectorAll('.game-item');
+        gameItems.forEach(function(item) {
+            let altText = item.querySelector('img').alt.toLowerCase();
+            if (altText.includes(filter)) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
         });
+    });
 
-        function openFullscreenGame(url) {
-            window.location.href = url;
-            document.body.requestFullscreen();
-        }
+    function openFullscreenGame(url) {
+        var newWindow = window.open(url, '_blank');
+        newWindow.onload = function() {
+            newWindow.document.body.requestFullscreen();
+        };
+    }
 
-        function openFullscreenVideo(url) {
-            var videoElement = document.createElement('video');
-            videoElement.src = url;
-            videoElement.controls = true;
-            videoElement.autoplay = true;
-            videoElement.style.width = "100%";
-            videoElement.style.height = "100%";
-            document.body.innerHTML = '';
-            document.body.appendChild(videoElement);
-            document.body.requestFullscreen();
-        }
-    </script>
+    function openFullscreenVideo(url) {
+        var videoElement = document.createElement('video');
+        videoElement.src = url;
+        videoElement.controls = true;
+        videoElement.autoplay = true;
+        videoElement.style.width = "100%";
+        videoElement.style.height = "100%";
+        document.body.innerHTML = '';
+        document.body.appendChild(videoElement);
+        document.body.requestFullscreen();
+    }
+</script>
 </body>
 </html>
