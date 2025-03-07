@@ -100,13 +100,24 @@
             <img src="2DEEC30C-D5EA-44C9-998F-18476469B553.jpeg" alt="a small world cup" onclick="openFullscreenGame('smallcup.html')">
         </div>
         <div class="game-item">
-            <img src="C869D889-E408-4283-8696-CE60C2DBE65B.jpeg" alt="panic button" onclick="openFullscreenGame('memex (3).mov')">
-        </div>
-    
+            <img src="C869D889-E408-4283-8696-CE60C2DBE65B.jpeg" alt="panic button" onclick="openVideo('memex (3).mov')">
+        
     </div>
     <script>
         function openFullscreenGame(url) {
             window.location.href = url;
+            document.body.requestFullscreen();
+        }
+
+        function openVideo(url) {
+            var videoElement = document.createElement('video');
+            videoElement.src = url;
+            videoElement.controls = true;
+            videoElement.autoplay = true;
+            videoElement.style.width = "100%";
+            videoElement.style.height = "100%";
+            document.body.innerHTML = '';
+            document.body.appendChild(videoElement);
             document.body.requestFullscreen();
         }
     </script>
