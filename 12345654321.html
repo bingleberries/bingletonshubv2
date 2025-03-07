@@ -23,7 +23,7 @@
             border-radius: 10px;
         }
         h1 {
-            color: white; /* Changed to white */
+            color: white;
             font-size: 3em;
             width: 100%;
             text-align: center;
@@ -37,9 +37,21 @@
             cursor: pointer;
             border-radius: 10px;
         }
+        .search-container {
+            width: 100%;
+            text-align: right;
+            padding: 10px;
+        }
+        .search-container input {
+            padding: 5px;
+            width: 20%;
+        }
     </style>
 </head>
 <body>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search games...">
+    </div>
     <div class="container">
         <h1>Games</h1>
         <div class="game-item">
@@ -104,12 +116,25 @@
         </div>
         <div class="game-item">
             <img src="A4FF842C-E7DD-43D2-83B4-9876961A0B2B_4_5005_c.jpeg" alt="Doodle Jump" onclick="openFullscreenGame('doodlejump.html')">
-            </div>
+        </div>
         <div class="game-item">
             <img src="44270862-7DEF-4FE6-8891-488E55A9FCB3_4_5005_c.jpeg" alt="Basket bros" onclick="openFullscreenGame('clbasketbros.html')">
-        
+        </div>
     </div>
     <script>
+        document.getElementById('searchBar').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let gameItems = document.querySelectorAll('.game-item');
+            gameItems.forEach(function(item) {
+                let altText = item.querySelector('img').alt.toLowerCase();
+                if (altText.includes(filter)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
         function openFullscreenGame(url) {
             window.location.href = url;
             document.body.requestFullscreen();
