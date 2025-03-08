@@ -38,23 +38,47 @@
             cursor: pointer;
             border-radius: 10px;
         }
-        .search-container {
+        .search-bar {
             width: 100%;
-            text-align: right;
-            padding: 10px;
+            max-width: 400px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
         }
-        .search-container input {
-            padding: 5px;
-            width: 20%;
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-bar input[type="text"]:focus {
+            border-color: #45a049;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .search-bar button:hover {
+            background-color: #45a049;
+            border-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="search-container">
-        <input type="text" id="searchBar" placeholder="Search games...">
+    <h1>Games</h1>
+    <div class="search-bar">
+        <input type="text" id="searchBar" placeholder="Search for games...">
+        <button type="button">Search</button>
     </div>
     <div class="container">
-        <h1>Games</h1>
         <div class="game-item">
             <img src="F49C3BC3-4B45-44B7-BE3A-5692B4F7A9D7.png" alt="1v1.lol" onclick="openFullscreenGame('1v1.html')">
         </div>
@@ -123,23 +147,21 @@
         </div>
         <div class="game-item">
             <img src="220E032B-9AB8-4031-BB88-DD60500151D8.jpeg" alt="Basketball Stars" onclick="openFullscreenGame('basketballstars.html')">
-            </div>
+        </div>
         <div class="game-item">
             <img src="E641AF29-F831-4C88-A69E-C60787E5D364.jpeg" alt="Elastic Face" onclick="openFullscreenGame('elasticface.html')">
-            </div>
+        </div>
         <div class="game-item">
             <img src="D87D8631-38D1-4B0E-B9D5-C4889DE9B92F.png" alt="Smashy Road 2" onclick="openFullscreenGame('clescaperoad.html')">
-            </div>
+        </div>
         <div class="game-item">
             <img src="C5647414-060F-4B78-A8C7-11DA5BF110F9.jpeg" alt="Garry's Mod" onclick="openFullscreenGame('garrymod.html')">
-            </div>
+        </div>
         <div class="game-item">
             <img src="B03908BA-FC9F-4116-A8B5-847BE5417A80.png" alt="Rooftop Snipers" onclick="openFullscreenGame('rooftopsnipers.html')">
-            </div>
+        </div>
         <div class="game-item">
             <img src="CF88EAED-E715-45EA-A8A9-57334F09D4B1.jpeg" alt="Skibidi Toilet In Backrooms" onclick="openFullscreenGame('skibidibackrooms.html')">
-
-
         </div>
     </div>
     <script>
@@ -174,6 +196,6 @@
         document.body.appendChild(videoElement);
         document.body.requestFullscreen();
     }
-</script>
+    </script>
 </body>
 </html>
