@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eduquest</title>
-    <link rel="icon" type="image/png" href="08A6D81C-0145-47F2-A5C7-D936C5D2E995.png">
+    <title>Games</title>
+    <link rel="icon" type="image/jpeg" href="DE2F2F51-149E-49EA-AFB0-F8AA898C82CA.jpeg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,68 +10,204 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            background: url('AE8A006C-3F57-435A-9552-42541BD3DB16.jpeg') no-repeat center center fixed;
+            min-height: 100vh;
+            background: url('9C22690F-E037-46E8-8863-F61AE40E3A6A.jpeg') no-repeat center center fixed;
             background-size: cover;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
             padding: 20px;
             border-radius: 10px;
         }
-        .input-field {
-            margin: 10px 0;
+        h1 {
+            color: white;
+            font-size: 3em;
+            width: 100%;
+            text-align: center;
         }
-        .button {
-            margin-top: 20px;
+        .game-item {
+            margin: 10px;
         }
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+        .game-item img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .search-container {
+            width: 100%;
+            text-align: right;
+            padding: 10px;
+        }
+        .search-container input {
+            padding: 5px;
+            width: 20%;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-bar input[type="text"]:focus {
+            border-color: #45a049;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
             background-color: #4CAF50;
             color: white;
-            font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, border-color 0.3s;
         }
-        button:hover {
+        .search-bar button:hover {
             background-color: #45a049;
+            border-color: #45a049;
         }
     </style>
 </head>
 <body>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search games...">
+    </div>
     <div class="container">
-        <h1>Eduquest</h1>
-        <div class="input-field">
-            <input type="text" id="username" placeholder="Username">
+        <h1>Games</h1>
+        <div class="game-item">
+            <img src="F49C3BC3-4B45-44B7-BE3A-5692B4F7A9D7.png" alt="1v1.lol" onclick="openFullscreenGame('1v1.html')">
         </div>
-        <div class="input-field">
-            <input type="password" id="password" placeholder="Password">
+        <div class="game-item">
+            <img src="97825E8E-2065-46F0-815E-EB9F3D7169C7.jpeg" alt="Eaglercraft" onclick="openFullscreenGame('EaglercraftL_1.9_v0_7_0_Offline_Signed.html')">
         </div>
-        <div class="button">
-            <button onclick="login()">Login</button>
+        <div class="game-item">
+            <img src="EF24F77D-B550-4F41-ABEC-B92F19657EEA.jpeg" alt="RL" onclick="openFullscreenGame('rl.html')">
+        </div>
+        <div class="game-item">
+            <img src="C88FB025-E58E-4A20-BD77-A443C7D1ACB0_4_5005_c.jpeg" alt="Soccer_random" onclick="openFullscreenGame('soccerrandom.html')">
+        </div>
+        <div class="game-item">
+            <img src="C95F6544-4FF6-479D-AA4B-B8EFF149A538_4_5005_c.jpeg" alt="PokemonEmerald" onclick="openFullscreenGame('pokemonemerald.html')">
+        </div>
+        <div class="game-item">
+            <img src="4555650A-F791-4A53-A01D-AF61FF721E11.jpeg" alt="Granny" onclick="openFullscreenGame('granny.html')">
+        </div>
+        <div class="game-item">
+            <img src="3E557167-3D35-4F39-BCB8-C76513603B87.jpeg" alt="Granny 2" onclick="openFullscreenGame('granny2.html')">
+        </div>
+        <div class="game-item">
+            <img src="3C2E3DEC-09A1-411D-A465-1D0D93F3448B_1_105_c.jpeg" alt="Happy wheels" onclick="openFullscreenGame('happywheels.html')">
+        </div>
+        <div class="game-item">
+            <img src="3CC7F354-A9AE-4D93-AA42-FC29C14FE978.jpeg" alt="Sonic Spinball" onclick="openFullscreenGame('sonicspinball.html')">
+        </div>
+        <div class="game-item">
+            <img src="640C7346-6273-44FC-814A-DFBC12A40ABD.jpeg" alt="Block Blast" onclick="openFullscreenGame('blockblast.html')">
+        </div>
+        <div class="game-item">
+            <img src="3F64EBE7-312F-400C-990F-EABD47C5C4C6.png" alt="Snow Rider 3d" onclick="openFullscreenGame('snowrider3d.html')">
+        </div>
+        <div class="game-item">
+            <img src="89FD347D-2ECA-4599-97F2-F1543FE9EDAE.jpeg" alt="Cookie Clicker" onclick="openFullscreenGame('cookieclicker.html')">
+        </div>
+        <div class="game-item">
+            <img src="EF055CCC-D0D6-4758-9A15-824B375295D5.jpeg" alt="Bitlife" onclick="openFullscreenGame('bitlife.html')">
+        </div>
+        <div class="game-item">
+            <img src="54C4B7D3-FA8F-4786-BD05-57BD393B99AD_4_5005_c.jpeg" alt="Time Shooter 3: SWAT" onclick="openFullscreenGame('timeshooter3.html')">
+        </div>
+        <div class="game-item">
+            <img src="C5C6F460-3C80-45BC-A54B-23A82DC4E602_4_5005_c.jpeg" alt="baldi basick" onclick="openFullscreenGame('baldisbasics.html')">
+        </div>
+        <div class="game-item">
+            <img src="D76CDA20-CEFF-447E-99EA-6C098E78C44A.png" alt="Superhot" onclick="openFullscreenGame('superhot.html')">
+        </div>
+        <div class="game-item">
+            <img src="B15B0F79-2299-4912-B96C-1A06AA0CDDA5.jpeg" alt="mario 64" onclick="openFullscreenGame('mario64.html')">
+        </div>
+        <div class="game-item">
+            <img src="CD4F9696-635B-4719-B771-656071D9F490.png" alt="mario 64 ds" onclick="openFullscreenGame('64ds.html')">
+        </div>
+        <div class="game-item">
+            <img src="2DEEC30C-D5EA-44C9-998F-18476469B553.jpeg" alt="a small world cup" onclick="openFullscreenGame('smallcup.html')">
+        </div>
+        <div class="game-item">
+            <img src="C869D889-E408-4283-8696-CE60C2DBE65B.jpeg" alt="panic button" onclick="openFullscreenVideo('memex (3).mov')">
+        </div>
+        <div class="game-item">
+            <img src="A4FF842C-E7DD-43D2-83B4-9876961A0B2B_4_5005_c.jpeg" alt="Doodle Jump" onclick="openFullscreenGame('doodlejump.html')">
+        </div>
+        <div class="game-item">
+            <img src="44270862-7DEF-4FE6-8891-488E55A9FCB3_4_5005_c.jpeg" alt="Basket bros" onclick="openFullscreenGame('clbasketbros.html')">
+        </div>
+        <div class="game-item">
+            <img src="220E032B-9AB8-4031-BB88-DD60500151D8.jpeg" alt="Basketball Stars" onclick="openFullscreenGame('basketballstars.html')">
+        </div>
+        <div class="game-item">
+            <img src="E641AF29-F831-4C88-A69E-C60787E5D364.jpeg" alt="Elastic Face" onclick="openFullscreenGame('elasticface.html')">
+        </div>
+        <div class="game-item">
+            <img src="D87D8631-38D1-4B0E-B9D5-C4889DE9B92F.png" alt="Smashy Road 2" onclick="openFullscreenGame('clescaperoad.html')">
+        </div>
+        <div class="game-item">
+            <img src="C5647414-060F-4B78-A8C7-11DA5BF110F9.jpeg" alt="Garry's Mod" onclick="openFullscreenGame('garrymod.html')">
+        </div>
+        <div class="game-item">
+            <img src="B03908BA-FC9F-4116-A8B5-847BE5417A80.png" alt="Rooftop Snipers" onclick="openFullscreenGame('rooftopsnipers.html')">
+        </div>
+        <div class="game-item">
+            <img src="CF88EAED-E715-45EA-A8A9-57334F09D4B1.jpeg" alt="Skibidi Toilet In Backrooms" onclick="openFullscreenGame('skibidibackrooms.html')">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for games...">
+            <button type="button">Search</button>
         </div>
     </div>
     <script>
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            const validCredentials = [
-                { user: 'bingleton', pass: 'marshall5' },
-                { user: 'the_mr.argonian', pass: 'argonian6' }
-            ];
-
-            const isValid = validCredentials.some(cred => cred.user === username && cred.pass === password);
-
-            if (isValid) {
-                window.location.href = '12345654321 (27).html';
+    document.getElementById('searchBar').addEventListener('input', function() {
+        let filter = this.value.toLowerCase();
+        let gameItems = document.querySelectorAll('.game-item');
+        gameItems.forEach(function(item) {
+            let altText = item.querySelector('img').alt.toLowerCase();
+            if (altText.includes(filter)) {
+                item.style.display = '';
             } else {
-                alert('Invalid credentials');
+                item.style.display = 'none';
             }
-        }
+        });
+    });
+
+    function openFullscreenGame(url) {
+        var newWindow = window.open(url, '_blank');
+        newWindow.onload = function() {
+            newWindow.document.body.requestFullscreen();
+        };
+    }
+
+    function openFullscreenVideo(url) {
+        var videoElement = document.createElement('video');
+        videoElement.src = url;
+        videoElement.controls = true;
+        videoElement.autoplay = true;
+        videoElement.style.width = "100%";
+        videoElement.style.height = "100%";
+        document.body.innerHTML = '';
+        document.body.appendChild(videoElement);
+        document.body.requestFullscreen();
+    }
     </script>
 </body>
 </html>
