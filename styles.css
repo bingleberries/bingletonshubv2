@@ -76,3 +76,12 @@ button:hover {
     background-color: #45a049;
     border-color: #45a049;
 }
+
+/* Hover animation for game items */
+.game-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-item:hover {
+    transform: scale(1.1);
+}
