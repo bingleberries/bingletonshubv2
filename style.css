@@ -23,16 +23,17 @@ h2, button, footer {
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column;
+     display: flex;
+    flex-direction: row; /* Change from column to row */
     align-items: center;
+    justify-content: center; /* Center the buttons horizontally */
     overflow-y: auto;
     max-height: 80vh;
     width: 100%;
 }
 
 button {
-    margin: 15px 0;
+   margin: 15px 10px; /* Add horizontal margin */
     background-color: #333;
     color: white;
     border: 2px solid #555;
