@@ -18,16 +18,5 @@
         <button onclick="window.open('historyflooder.html', '_blank')">History Flooder</button>
     </div>
 
-    <script>
-        // Disable scrolling during loading
-        window.onload = function() {
-            setTimeout(function() {
-                // Fade out the loading screen
-                document.getElementById('loadingScreen').classList.add('fadeOut');
-                // Enable scrolling once the loading screen fades out
-                document.body.style.overflow = 'auto'; // Enable scrolling
-            }, 2000); // Wait for 2 seconds before fading out
-        };
-    </script>
 </body>
 </html>
