@@ -220,10 +220,8 @@
     });
 
     function openFullscreenGame(url) {
-        var newWindow = window.open('about:blank', '_blank');
-        newWindow.onload = function() {
-            newWindow.location.href = url;
-            newWindow.document.body.requestFullscreen();
+            const newWindow = window.open('about:blank', '_blank');
+            newWindow.document.write(`
         };
     }
 
