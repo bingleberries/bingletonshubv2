@@ -1,4 +1,4 @@
-# Bingeton's Hub
+# Bingleton's Hub
 📚 Bingleton’s Hub – Learn, Explore, and Grow! 🎓
 
 Unlock a world of knowledge with Bingleton’s Hub, your go-to platform for interactive and engaging learning resources! Whether you want to improve your problem-solving skills, explore technology, or sharpen your mind with educational activities, we’ve got you covered.
