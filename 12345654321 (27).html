@@ -220,10 +220,29 @@
     });
 
     function openFullscreenGame(url) {
-            const newWindow = window.open('about:blank', '_blank');
-            newWindow.document.write(`
-        };
-    }
+    const newWindow = window.open('about:blank', '_blank');
+    newWindow.document.write(`
+        <html>
+            <head>
+                <style>
+                    body {
+                        margin: 0;
+                        overflow: hidden;
+                    }
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                </style>
+            </head>
+            <body>
+                <iframe src="${url}" frameborder="0" allowfullscreen></iframe>
+            </body>
+        </html>
+    `);
+    newWindow.document.close();
+}
 
     function openFullscreenVideo(url) {
         var videoElement = document.createElement('video');
