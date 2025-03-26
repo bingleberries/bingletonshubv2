@@ -1,0 +1,63 @@
+function openInBlank(url) {
+    const newWindow = window.open('about:blank', '_blank');
+    newWindow.document.write(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="9A6DCD82-8E5F-490B-96BC-8D0E7C83F8FB_4_5005_c.jpeg" type="image/jpeg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingleton's Hub</title>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    .center-image {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px; /* adjust this value to move the image higher or lower */
+    }
+  </style>
+</head>
+<body>
+    <div class="main"></div>
+    <img src="Cool Text - Bingletons Proxy Hub 479042295691801.png" alt="Bingleton's Proxy Hub" style="display: block; margin: 0 auto;" />
+    <iframe src="${url}" style="width:100%; height:100%; border:none;"></iframe>
+</body>
+</html>`);
+    newWindow.document.close();
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.addEventListener('keydown', (e) => {
+        if (e.key === '`') {
+            const newWindow = window.open('about:blank', '_blank');
+            newWindow.document.write(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="9A6DCD82-8E5F-490B-96BC-8D0E7C83F8FB_4_5005_c.jpeg" type="image/jpeg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingleton's Hub</title>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    .center-image {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px; /* adjust this value to move the image higher or lower */
+    }
+  </style>
+</head>
+<body>
+    <div class="main"></div>
+    <img src="Cool Text - Bingletons Proxy Hub 479042295691801.png" alt="Bingleton's Proxy Hub" style="display: block; margin: 0 auto;" />
+    <div class="button-container">
+         <button onclick="openInBlank('12345654321%20(27).html')">Games</button>
+         <button onclick="openInBlank('passwordproxy.html')">Proxies</button>
+         <button onclick="openInBlank('historyflooder.html')">History Flooder</button>
+     </div>
+</body>
+</html>`);
+            newWindow.document.close();
+        }
+    });
+});
