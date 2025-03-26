@@ -2,9 +2,9 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; /* full viewpoint height obv */
     margin: 0;
     padding: 20px;
     padding-bottom: 60px;
@@ -34,7 +34,7 @@ h2, button, footer {
 }
 
 button {
-   margin: 15px 10px; /* Add horizontal margin */
+   margin: 15px 10px;
     background-color: #333;
     color: white;
     border: 2px solid #555;
