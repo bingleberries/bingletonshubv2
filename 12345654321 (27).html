@@ -299,11 +299,53 @@
         <div class="game-item">
             <img src="slither.jpg" alt="slither.io slither io" onclick="openFullscreenGame('slither.html')">
     
-    
+
+
+
+            
+
+
+
+
+            
+    <div style="width: 50px; height: 100vh; background-image: url('https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8520.jpg?semt=ais_hybrid'); background-size: cover; background-position: center; position: fixed; left: 0; top: 0; transition: width 0.3s ease; overflow-x: hidden; white-space: nowrap; padding-top: 20px; z-index: 1000;">
+    <a href="/index.html" style="padding: 10px 15px; display: flex; align-items: center; color: white; text-decoration: none; font-size: 18px; font-weight: bold; position: relative; transition: color 0.3s ease, transform 0.2s ease; overflow: hidden;">
+        <span class="emoji-box" style="visibility: hidden; opacity: 0; transition: visibility 0s 0.3s, opacity 0.3s ease;">🏠</span>
+        <span style="visibility: hidden; opacity: 0; transition: visibility 0s 0.3s, opacity 0.3s ease;">| home</span>
+    </a>
+    <a href="/12345654321%20(27).html" style="padding: 10px 15px; display: flex; align-items: center; color: white; text-decoration: none; font-size: 18px; font-weight: bold; position: relative; transition: color 0.3s ease, transform 0.2s ease; overflow: hidden;">
+        <span class="emoji-box" style="visibility: hidden; opacity: 0; transition: visibility 0s 0.3s, opacity 0.3s ease;">🎮</span>
+        <span style="visibility: hidden; opacity: 0; transition: visibility 0s 0.3s, opacity 0.3s ease;">| games</span>
+    </a>
+    <a href="/historyflooder.html" style="padding: 10px 15px; display: flex; align-items: center; color: white; text-decoration: none; font-size: 18px; font-weight: bold; position: relative; transition: color 0.3s ease, transform 0.2s ease; overflow: hidden;">
+        <span class="emoji-box" style="visibility: hidden; opacity: 0; transition: visibility 0s 0.3s, opacity 0.3s ease;">🌊</span>
+        <span style="visibility: hidden; opacity: 0; transition: visibility 0s 0.3s, opacity 0.3s ease;">| history flooder</span>
+    </a>
+  
     
     </div>
     <script>
-    document.getElementById('searchBar').addEventListener('input', function() {
+  // JavaScript to handle sidebar hover effect
+    document.querySelector('.sidebar').addEventListener('mouseenter', function() {
+        this.style.width = '200px';
+        const items = this.querySelectorAll('.emoji-box, span');
+        items.forEach(item => {
+            item.style.visibility = 'visible';
+            item.style.opacity = '1';
+        });
+    });
+    document.querySelector('.sidebar').addEventListener('mouseleave', function() {
+        this.style.width = '50px';
+        const items = this.querySelectorAll('.emoji-box, span');
+        items.forEach(item => {
+            item.style.visibility = 'hidden';
+            item.style.opacity = '0';
+        });
+    });
+
+//ends here delete if needed
+        
+        document.getElementById('searchBar').addEventListener('input', function() {
         let filter = this.value.toLowerCase();
         let gameItems = document.querySelectorAll('.game-item');
         gameItems.forEach(function(item) {
