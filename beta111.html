@@ -21,6 +21,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-SZN69N4SEF');
+  // Function to detect mobile devices
+    function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Redirect to mobileindex.html if the user is on a mobile device
+    if (isMobile()) {
+        window.location.href = "mobileindex.html";
+    }
 </script>
     
     <style>
